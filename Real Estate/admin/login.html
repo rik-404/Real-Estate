@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/imgs/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/default.css">
+    <link rel="stylesheet" href="../src/css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/282aa7276a.js" crossorigin="anonymous"></script>
+    <title>Admin Login - Elite House</title>
+</head>
+<body>
+    <header>
+    </header>
+    <div class="admin-login-container">
+        <div class="admin-login-box">
+            <div class="admin-login-logo">
+                <img src="../src/imgs/icon.png" alt="Elite House">
+            </div>
+            <h2>Área Administrativa</h2>
+            <form id="admin-login-form">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+                <div id="login-error" class="error-message"></div>
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="back-to-site">
+                <a href="../index.html">Voltar para o site</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/js/admin-login.js"></script>
+    <script>
+        // Script para mostrar/ocultar senha
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordField = document.getElementById('password');
+            
+            if (togglePassword && passwordField) {
+                togglePassword.addEventListener('click', function() {
+                    // Alternar tipo do campo entre password e text
+                    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordField.setAttribute('type', type);
+                    
+                    // Alternar ícone
+                    const icon = togglePassword.querySelector('i');
+                    if (type === 'text') {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    } else {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

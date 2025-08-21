@@ -1,0 +1,64 @@
+.container-about {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Seção "Sobre nós" */
+.sobre-nos {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex; /* Define a exibição como flexbox */
+  flex-direction: column; /* Organiza o conteúdo verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.sobre-nos img {
+  width: 350px;
+  margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+}
+
+.sobre-nos h2 {
+  margin-bottom: 15px;
+  color: #f3641c;
+}
+
+.sobre-nos p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Destaques (features) */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+  padding: 20px;
+}
+
+.feature-box {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+.feature-box h3 {
+  color: #f3641c;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.feature-box i {
+  color: #f3641c;
+  font-size: 45px;
+}
